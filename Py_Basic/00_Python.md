@@ -6,8 +6,21 @@
 
 # PyPI : Python Package Index
 - 파이썬으로 만든 파이썬 패키지 저장소 $\Rightarrow$ 오픈소스 라이브러리 사용
+- `!python --version`
+    - 파이썬 버전 확인
+- `!pip list`
+    - 사용가능한 라이브러리 리스트 명령어
+    - `pip list` : PyPI로 가져올 수 있는 라이브러리의 세팅
 - `pip install "packagename"`
     - 패키지 설치 명령어
+    ```ruby
+    # tslean(time series learn)
+    $ pip install tslearn
+    ```
+    ```py
+    import tslearn
+    from tslean.clustering import TimeSeriesKMeans
+    ```
 
 # Kaggle 
 - Kaggle
