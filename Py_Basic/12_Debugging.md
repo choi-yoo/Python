@@ -49,3 +49,23 @@ except :
     
     add('a' + 3)
     ```
+
+## 파일 저장 조건 만들기
+- test.txt 열어 N글자가 안 되는 단어들을 다 지우고 다시 저장
+    ```py
+    N = int(input("Enter the length criteria for excluding characters: "))
+
+    with open("../input/programming/test.txt", 'r') as f:
+        text = [word.replace("\n", "") for word in f.readlines()]
+
+    output = []
+    for word in text:
+        if len(word) > N: # N글자보다 큰 경우
+            output.append(word)
+
+    # N에 따라 다른 이름의  
+    with open(f"result_len{N}_words.txt", 'w') as f:
+        for word in output:
+            print(word, file=f)
+
+    ```
